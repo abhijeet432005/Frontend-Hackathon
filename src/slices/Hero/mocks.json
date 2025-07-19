@@ -1,0 +1,101 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Pound"
+						}
+					}
+				]
+			},
+			"subheading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ut officia ea do et commodo aliquip ad anim veniam anim aute."
+						}
+					}
+				]
+			},
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Quis id dolor qui laborum elit qui enim officia in adipisicing ut fugiat nulla do amet. Ex sit et irure quis mollit veniam incididunt aute voluptate velit velit non ut Lorem reprehenderit. Esse qui nulla aliquip incididunt cupidatat pariatur labore aliquip excepteur aute elit do."
+						}
+					}
+				]
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "machine",
+				"type": "Text"
+			},
+			"button_link": {
+				"key": "981ed2e5-2f56-482b-89c5-0b6fba81e2b6",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "old"
+				}
+			},
+			"cans_images": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+					"width": 8640,
+					"height": 8640
+				},
+				"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+				"width": 8640,
+				"height": 8640,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "sometime",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"second_heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Joined"
+						}
+					}
+				]
+			},
+			"secon": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Tempor anim ut enim cupidatat aliqua incididunt laborum. Sint do ut irure officia occaecat do ex cillum aliqua eiusmod cupidatat. Quis et officia Lorem ullamco cillum pariatur sint Lorem commodo do aliquip dolor consequat."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
