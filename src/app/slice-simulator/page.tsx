@@ -18,7 +18,7 @@ export default function SliceSimulatorPage({
     redirect("/");
   }
 
-  const slices = getSlices(searchParams.state);
+  const slices = getSlices(searchParams.secret);
 
   return (
     <SliceSimulator background="" zIndex={10}>

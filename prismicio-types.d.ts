@@ -447,7 +447,7 @@ export interface SkyDivwSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/select
    */
   flavor: prismic.SelectField<
-    "lemonLime" | "grape" | "blackCherry" | "strawberry" | "watermelon",
+    "lemonLime" | "grape" | "blackCherry" | "strawberryLemonade" | "watermelon",
     "filled"
   >;
 }
