@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { Environment } from "@react-three/drei";
+import { Environment, OrbitControls } from "@react-three/drei";
 import { Group } from "three";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -12,9 +12,9 @@ import { useStore } from "@/hooks/useStore";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-// type Props = {};
+type Props = {};
 
-export default function Scene() {
+export default function Scene({}: Props) {
   const isReady = useStore((state) => state.isReady);
 
   const can1Ref = useRef<Group>(null);
