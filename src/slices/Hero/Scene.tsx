@@ -1,21 +1,21 @@
 "use client";
 
 import { useRef } from "react";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 import { Group } from "three";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import FloatingCan from "@/components/FloatingCan";
-// import { useStore } from "@/hooks/useStore";
+import { useStore } from "@/hooks/useStore";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-type Props = {};
+// type Props = {};
 
-export default function Scene({}: Props) {
-//   const isReady = useStore((state) => state.isReady);
+export default function Scene() {
+  const isReady = useStore((state) => state.isReady);
 
   const can1Ref = useRef<Group>(null);
   const can2Ref = useRef<Group>(null);
@@ -43,7 +43,7 @@ export default function Scene({}: Props) {
     )
       return;
 
-    // isReady();
+    isReady();
 
     // Set can starting location
     gsap.set(can1Ref.current.position, { x: -1.5 });
