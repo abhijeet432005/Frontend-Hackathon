@@ -8,6 +8,7 @@ type Props = {
 };
 
 const SmoothScroll = ({ children }: Props) => {
+  console.log('🚀 Lenis SmoothScroll mounted!');
   return (
     <ReactLenis root>
       {children}
