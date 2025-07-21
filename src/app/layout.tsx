@@ -1,13 +1,12 @@
 import localFont from 'next/font/local'
-
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
-
 
 import "./app.css";
 import Header from "@/components/Header";
 import ViewCanvas from '@/components/ViewCanvas';
 import Footer from '@/components/Footer';
+import SmoothScroll from '@/components/SmoothScroll'
 
 const alpino = localFont({
   src: "../../public/fonts/Alpino-Variable.woff2",
@@ -26,12 +25,14 @@ export default function RootLayout({
       <body className='overflow-x-hidden bg-yellow-300'>
         <Header />
         <main>
-          {children}
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
           <ViewCanvas />
         </main>
         <Footer />
+        <PrismicPreview repositoryName={repositoryName} />
       </body>
-      <PrismicPreview repositoryName={repositoryName} />
     </html>
   );
 }
