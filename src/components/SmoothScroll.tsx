@@ -9,10 +9,12 @@ type Props = {
 
 const SmoothScroll = ({ children }: Props) => {
   console.log('🚀 Lenis SmoothScroll mounted!');
+  const LenisComponent = ReactLenis as unknown as React.FC<{ children: ReactNode; root?: boolean }>;
+
   return (
-    <ReactLenis root>
+    <LenisComponent root>
       {children}
-    </ReactLenis>
+    </LenisComponent>
   );
 };
 
