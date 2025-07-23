@@ -1,6 +1,7 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { JSX } from "react";
+import TrailContainer from '@/components/TrailContainer'
 
 /**
  * Props for `BigText`.
@@ -15,9 +16,10 @@ const BigText = ({ slice }: BigTextProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="w-screen overflow-hidden bg-[#FE6334] text-[#FEE832]"
+      className="w-screen overflow-hidden bg-[#FE6334] text-[#FEE832] relative"
     >
-      <h2 className="grid w-full gap-[3vw] py-10 text-center font-black uppercase leading-[.7]">
+      <TrailContainer />
+      <h2 className="relative z-10 grid w-full gap-[3vw] py-10 text-center font-black uppercase leading-[.7]">
         <div className="text-[30vw]">Fizz</div>
         <div className="grid gap-[3vw] text-[30vw] md:flex md:text-[11vw] md:items-center md:justify-center">
           <span className="inline-block">full </span>
@@ -26,7 +28,9 @@ const BigText = ({ slice }: BigTextProps): JSX.Element => {
         </div>
         <div className="text-[25vw]">vibes</div>
       </h2>
+
     </section>
+
   );
 };
 
