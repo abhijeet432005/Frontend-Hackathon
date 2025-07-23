@@ -6,7 +6,6 @@
 
 ---
 
-
 ## 🚀 Live Demo
 
 🔗 [Visit the Website](https://fizz-lemon.vercel.app/)
