@@ -23,6 +23,7 @@
     "@studio-freight/react-lenis": "^0.0.47",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/three": "^0.178.1",
+    "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "gsap": "^3.13.0",
     "next": "^15.1.6",

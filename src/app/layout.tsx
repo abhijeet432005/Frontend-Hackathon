@@ -8,6 +8,7 @@ import ViewCanvas from '@/components/ViewCanvas'
 import Footer from '@/components/Footer'
 import SmoothScroll from '@/components/SmoothScroll'
 import Loader from '@/components/Loader'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const alpino = localFont({
   src: '../../public/fonts/Alpino-Variable.woff2',
