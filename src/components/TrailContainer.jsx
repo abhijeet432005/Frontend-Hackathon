@@ -12,8 +12,6 @@ const TrailContainer = () => {
   const interpMousePos = useRef({ x: 0, y: 0 });
   const isDesktop = useRef(false);
 
-  
-
   useEffect(() => {
     const config = {
       imageLifeSpan: 1000,
@@ -32,6 +30,16 @@ const TrailContainer = () => {
       { length: trailImageCount },
       (_, i) => `/trail-image/img${i + 1}.png`
     );
+
+    // ✅ PRELOAD images to prevent black flash
+    const preloadImages = (imageUrls) => {
+      imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+      });
+    };
+
+    preloadImages(images); // 👈 Call here
 
     const container = trailContainerRef.current;
     if (!container) return;
@@ -75,6 +83,8 @@ const TrailContainer = () => {
 
         const imgLayer = document.createElement("div");
         imgLayer.classList.add("image-layer");
+
+        // ✅ Add fallback transparent layer to avoid black flash (optional)
         imgLayer.style.backgroundImage = `url(${imgSrc})`;
 
         const y1 = i * 10;
