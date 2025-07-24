@@ -7,18 +7,20 @@ const Loader = ({ children }) => {
   const [counter, setCounter] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
 
-  // Animate FIZZ letters on mount
-useEffect(() => {
-  gsap.from('.fizz-text span', {
-    opacity: 0,
-    y: 50,
-    scale: 0.95,
-    transformOrigin: 'bottom',
-    stagger: 0.1,
-    duration: 0.8,
-    ease: 'back.out(1.7)', // smooth pop-in feel
-  })
-}, [])
+  const radius = 26
+  const circumference = 2 * Math.PI * radius
+
+  useEffect(() => {
+    gsap.from('.fizz-text span', {
+      opacity: 0,
+      y: 50,
+      scale: 0.95,
+      transformOrigin: 'bottom',
+      stagger: 0.1,
+      duration: 0.8,
+      ease: 'back.out(1.7)',
+    })
+  }, [])
 
   useEffect(() => {
     const count = setInterval(() => {
@@ -46,20 +48,17 @@ useEffect(() => {
           duration: 1.2,
         }
       )
-      // FIZZ normal fade out (no stagger, no movement)
       .to('.fizz-text', {
         opacity: 0,
         duration: 0.5,
         ease: Expo.easeOut,
       }, '-=0.3')
-
       .to('.follow-bar', {
         height: '100%',
         ease: Expo.easeInOut,
         duration: 0.7,
         delay: 0.2,
       })
-
       .to('.loader-wrapper', {
         opacity: 0,
         duration: 0.5,
@@ -93,10 +92,27 @@ useEffect(() => {
         ))}
       </h1>
 
-      {/* Bottom Right Counter */}
-      <p className="loader-hide text-[1rem] sm:text-[1.2rem] md:text-[1.3rem] text-white z-30 absolute bottom-4 right-5 sm:bottom-6 sm:right-8">
-        {counter}%
-      </p>
+      {/* Bottom Right Circular Progress with % */}
+      <div className="loader-hide absolute bottom-4 right-5 sm:bottom-6 sm:right-8 z-30 w-14 h-14">
+        <svg className="w-full h-full rotate-[-90deg]">
+          <circle
+            cx="28"
+            cy="28"
+            r="26"
+            stroke="#facc15"
+            strokeWidth="3"
+            fill="none"
+            strokeDasharray={circumference}
+            strokeDashoffset={circumference * (1 - counter / 100)}
+            className="transition-all duration-75 ease-linear"
+          />
+        </svg>
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+          <p className="text-[1rem] sm:text-[1.2rem] md:text-[1.3rem] text-white">
+            {counter}%
+          </p>
+        </div>
+      </div>
     </div>
   )
 }

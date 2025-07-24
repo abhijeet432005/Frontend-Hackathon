@@ -30,7 +30,7 @@ const TrailContainer = () => {
     const trailImageCount = 20;
     const images = Array.from(
       { length: trailImageCount },
-      (_, i) => `/trail-image/img${i + 1}.jpg`
+      (_, i) => `/trail-image/img${i + 1}.png`
     );
 
     const container = trailContainerRef.current;
