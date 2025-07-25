@@ -61,7 +61,7 @@ const Carousel = ({ slice }: CarouselProps): JSX.Element => {
       0,
     )
       .to(
-        ".background, .wavy-circles-outer, .wavy-circles-inner",
+        ".background, .wavy-circles-inner",
         {
           backgroundColor: FLAVORS[nextIndex].color,
           fill: FLAVORS[nextIndex].color,
