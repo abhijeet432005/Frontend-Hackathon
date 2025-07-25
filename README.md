@@ -8,7 +8,7 @@
 
 ## 🚀 Live Demo
 
-🔗 [Visit the Website](https://fizz-lemon.vercel.app/)
+🔗 [Visit the Website](https://fizz-soda.vercel.app/)
 
 ---
 
