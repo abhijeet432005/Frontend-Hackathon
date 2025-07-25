@@ -120,7 +120,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <div className="grid h-screen place-items-center">
           <div className="grid auto-rows-min place-items-center text-center">
             <h1 className="hero-header text-7xl font-black uppercase leading-[.8] cursor-default text-orange-500 md:text-[9rem] lg:text-[13rem]">
-              <Magnet padding={150} disabled={false} magnetStrength={50}>
+              <Magnet padding={50} disabled={false} magnetStrength={50}>
                 <TextSplitter
                   text={asText(slice.primary.heading)}
                   wordDisplayStyle="block"
