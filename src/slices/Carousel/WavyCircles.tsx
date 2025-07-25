@@ -15,14 +15,6 @@ export function WavyCircles(props: SVGProps<SVGSVGElement>) {
       ease: "none",
       repeat: -1,
     });
-    gsap.to(".wavy-circles-outer", {
-      transformOrigin: "center",
-      rotate: "-360",
-      duration: 22,
-      scale: 1,
-      ease: "none",
-      repeat: -1,
-    });
   });
 
   return (
